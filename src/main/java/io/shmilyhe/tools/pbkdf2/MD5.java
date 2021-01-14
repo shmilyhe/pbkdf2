@@ -1,14 +1,14 @@
-package com.eshore.tools.pbkdf2;
+package io.shmilyhe.tools.pbkdf2;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-public class Sha224 implements Hash {
+public class MD5 implements Hash {
 
 	MessageDigest digest;
-	public  Sha224(){
+	public  MD5(){
 		try {
-			digest = MessageDigest.getInstance("SHA-224"); 
+			digest = MessageDigest.getInstance("MD5"); 
 		} catch (NoSuchAlgorithmException e) {
 			e.printStackTrace();
 		}
@@ -32,12 +32,12 @@ public class Sha224 implements Hash {
 	}
 	@Override
 	public int size() {
-		return 28;
+		return 32;
 	}
 	@Override
 	public Hash getHash() {
 		// TODO Auto-generated method stub
-		return new Sha224();
+		return new MD5();
 	}
 	@Override
 	public int blockSize() {

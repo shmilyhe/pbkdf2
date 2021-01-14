@@ -6,9 +6,9 @@
  *HMAC(text) = H( K XOR opad, H(K XOR ipad, text))
  *
  */
-package com.eshore.tools.pbkdf2;
+package io.shmilyhe.tools.pbkdf2;
 
-import com.eshore.tools.Bytes;
+import io.shmilyhe.tools.Bytes;
 
 /**
  * 

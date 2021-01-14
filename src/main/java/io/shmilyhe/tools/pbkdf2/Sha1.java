@@ -1,14 +1,14 @@
-package com.eshore.tools.pbkdf2;
+package io.shmilyhe.tools.pbkdf2;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-public class Sha256 implements Hash {
+public class Sha1 implements Hash {
 
 	MessageDigest digest;
-	public  Sha256(){
+	public  Sha1(){
 		try {
-			digest = MessageDigest.getInstance("SHA-256"); 
+			digest = MessageDigest.getInstance("SHA-1"); 
 		} catch (NoSuchAlgorithmException e) {
 			e.printStackTrace();
 		}
@@ -37,7 +37,7 @@ public class Sha256 implements Hash {
 	@Override
 	public Hash getHash() {
 		// TODO Auto-generated method stub
-		return new Sha256();
+		return new Sha1();
 	}
 	@Override
 	public int blockSize() {

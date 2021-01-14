@@ -1,9 +1,9 @@
-package com.eshore;
+package io.shmilyhe.test;
 
 import org.junit.Test;
 
-import com.eshore.tools.pbkdf2.PBKDF2;
-import com.eshore.tools.pbkdf2.Sha256;
+import io.shmilyhe.tools.pbkdf2.PBKDF2;
+import io.shmilyhe.tools.pbkdf2.Sha256;
 
 public class TestPbkdf2 {
 

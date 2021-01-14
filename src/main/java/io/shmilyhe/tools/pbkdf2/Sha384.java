@@ -1,14 +1,20 @@
-package com.eshore.tools.pbkdf2;
+package io.shmilyhe.tools.pbkdf2;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-public class Sha1 implements Hash {
+import io.shmilyhe.tools.Bytes;
 
+public class Sha384 implements Hash {
+
+	public static void main(String[] args){
+		System.out.println(Bytes.toHexString(new Sha384().sum("abc".getBytes())));
+	}
+	
 	MessageDigest digest;
-	public  Sha1(){
+	public  Sha384(){
 		try {
-			digest = MessageDigest.getInstance("SHA-1"); 
+			digest = MessageDigest.getInstance("SHA-384"); 
 		} catch (NoSuchAlgorithmException e) {
 			e.printStackTrace();
 		}
@@ -32,17 +38,17 @@ public class Sha1 implements Hash {
 	}
 	@Override
 	public int size() {
-		return 32;
+		return 48;
 	}
 	@Override
 	public Hash getHash() {
 		// TODO Auto-generated method stub
-		return new Sha1();
+		return new Sha384();
 	}
 	@Override
 	public int blockSize() {
 		// TODO Auto-generated method stub
-		return 64;
+		return 128;
 	}
 	@Override
 	public void write(byte[] bytes, int off, int len) {
